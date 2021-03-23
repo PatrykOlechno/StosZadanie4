@@ -2,12 +2,22 @@
 #include <iostream>
 #include "./Stos.h"
 
+Stos::Stos() {
+	// obserwacja: wywoluje sie dla obiektu automatycznego
+	std::cout << "Jestem bezparametrowym konstryktorem" << std::endl;
+}
+
 Stos::Stos(int size) {
+	// obserwacja: wywoluje sie zawsze
 	this->arr = new int[size];
 	this->totalSize = size;
 	this->currentSize = 0;
+	std::cout << "Jestem konstryktorem z parametrem" << std::endl;
 }
 Stos::~Stos() {
+	//obserwacja: dla zmiennej automatycznej wywola sie po wyjsciu z zakresu
+	//dla zmiennej dynamicznej wywola sie po uzyciu delete
+	std::cout << "Jestem destruktorem" << std::endl;
 	delete[] arr;
 }
 

@@ -7,7 +7,8 @@ class Stos
 	int currentSize;
 
 public:
-	Stos(int size); //konstruktor
+	Stos(); //konstruktor bez parametrow
+	Stos(int size); //konstruktor z parametre,
 	~Stos(); //destruktor
 
 	int push(int number);

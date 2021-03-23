@@ -2,11 +2,19 @@
 #include "Stos.h"
 
 int main() {
-	Stos* stos1 = new Stos(4);
+	{
+		Stos stosautomatyczny;
+	}
 
-	stos1->push(5);
-	stos1->push(4);
+	{
+		Stos* stos1 = new Stos(4);
 
-	std::cout << stos1->top() << std::endl;
+		stos1->push(5);
+		stos1->push(4);
+
+		std::cout << stos1->top() << std::endl;
+		delete stos1;
+	}
+
 	return 0;
 }
